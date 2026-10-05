@@ -115,7 +115,7 @@ export default class RAM extends CircuitElement {
     }
 
     resolve() {
-        if (this.write.value == 1) {
+        if (this.write.value == 1 && this.address.value !== undefined) {
             this.data[this.address.value] = this.dataIn.value;
         }
 
